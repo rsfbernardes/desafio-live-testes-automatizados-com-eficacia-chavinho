@@ -1,6 +1,7 @@
 package br.com.unipds.chavinho;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.List;
 public class Chavinho2Test {
 
     @Test
+    @DisplayName("Deve ler CSV sem cabeçalho usando record e separador ';'")
     void deveLerCsvSemCabecalhoComRecordESeparadorPontoEVirgula() {
         String csv = "src/test/resources/itens-cardapio.csv";
 
@@ -23,6 +25,7 @@ public class Chavinho2Test {
     }
 
     @Test
+    @DisplayName("Deve ignorar a primeira linha quando CSV possui cabeçalho")
     void deveLerCsvComCabecalhoIgnorandoPrimeiraLinha() {
         String csv = "src/test/resources/unipds-disciplinas.csv";
 
